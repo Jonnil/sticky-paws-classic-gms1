@@ -1,0 +1,3 @@
+diff a/CAT.gmx/scripts/scr_saveconfig.gml b/CAT.gmx/scripts/scr_saveconfig.gml	(rejected hunks)
+@@ -1 +0,0 @@
+-if(file_exists("Config.ini")){file_delete("Config.ini");}
