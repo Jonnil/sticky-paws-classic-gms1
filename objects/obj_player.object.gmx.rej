@@ -1,0 +1,9 @@
+diff a/CAT.gmx/objects/obj_player.object.gmx b/CAT.gmx/objects/obj_player.object.gmx	(rejected hunks)
+@@ -1063,6 +1063,7 @@
+ draw_text_transformed_colour(view_xview+64,view_yview+24-2,lives,1,1,0,c_black,c_black,c_black,c_black,1);
+ draw_text_transformed_colour(view_xview+64,view_yview+24+2,lives,1,1,0,c_black,c_black,c_black,c_black,1);
+ draw_text_transformed_colour(view_xview+64,view_yview+24,lives,1,1,0,c_white,c_white,c_white,c_white,1);
++if global.coins&gt;99{global.coins=0;/*1-UP*/lives+=1;if asset_get_type("snd_1up")==asset_sound{audio_play_sound(snd_1up,0,0);audio_sound_gain(snd_1up,global.sfx_volume,0);}if asset_get_type("obj_scoreup")==asset_object{obj=instance_create(x,y-16,obj_scoreup);with(obj){scoreup="1-UP";}}}
+ /*Coins*/
+ draw_set_halign(fa_left);draw_set_valign(fa_center);
+ if asset_get_type("spr_coin")==asset_sprite{draw_sprite_ext(spr_coin,0,view_xview+32,view_yview+32+32,0.5,0.5,0,c_white,1);}
